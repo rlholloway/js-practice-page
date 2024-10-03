@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice</title>
+</head>
+<body>
+    <h1>Super Cool Stuff</h1>
+    <h2>Check out the console -></h2>
+
+    <script>
+        /* BASIC FUNCTIONS */
+        function getMilk(money, costPerBottle) {
+
+                console.log("enter store");
+                console.log("buy " + calcBottles(money, costPerBottle) + " bottles of milk");
+                console.log("return home");
+                return calcChange(money, costPerBottle);
+            }
+
+            function calcBottles(startingMoney, costPerBottle) {
+                let numOfBottles = Math.floor(startingMoney / costPerBottle);
+
+                return numOfBottles;
+            }
+
+            function calcChange(startingAmount, costPerBottle) {
+                let change = startingAmount % costPerBottle;
+                return change;
+            }
+
+            console.log("Here is your " + getMilk(4, 1.5) + " change");
+    </script>
+</body>
+</html>
